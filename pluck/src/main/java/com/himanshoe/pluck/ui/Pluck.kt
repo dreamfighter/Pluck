@@ -64,6 +64,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.paging.compose.LazyPagingItems
 import androidx.paging.compose.collectAsLazyPagingItems
+import coil.compose.rememberAsyncImagePainter
 import coil.compose.rememberImagePainter
 import com.himanshoe.pluck.PluckConfiguration
 import com.himanshoe.pluck.R
@@ -202,7 +203,7 @@ internal fun PluckImage(
         contentAlignment = Alignment.Center,
     ) {
         Image(
-            painter = rememberImagePainter(pluckImage.uri),
+            painter = rememberAsyncImagePainter(pluckImage.uri),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = modifier
