@@ -117,7 +117,7 @@ fun Pluck(
     }, content = {
         val newModifier = modifier.padding(HalfQuarter)
         val cameraLauncher =
-            rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { it: Boolean ->
+            rememberLauncherForActivityResult(ActivityResultContracts.TakePicture()) { _: Boolean ->
                 onPhotoSelected(listOf(pluckViewModel.getPluckImage()) as List<PluckImage>)
             }
 
@@ -167,7 +167,7 @@ internal fun CameraIcon(
             .then(Modifier.background(MaterialTheme.colorScheme.background))
     ) {
         Image(
-            painter = rememberImagePainter(R.drawable.ic_camera),
+            painter = rememberAsyncImagePainter(R.drawable.ic_camera),
             contentDescription = null,
             contentScale = ContentScale.Crop,
             modifier = Modifier
