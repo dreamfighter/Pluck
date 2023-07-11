@@ -57,4 +57,4 @@ dependencies {
     androidTestImplementation(Deps.AndroidTest.espressoCore)
     androidTestApi(Deps.AndroidTest.uiTestJunit)
 }
-plugins.apply(Plugins.vanniktechPublish)
+//plugins.apply(Plugins.vanniktechPublish)
